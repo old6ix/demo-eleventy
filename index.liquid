@@ -1,6 +1,6 @@
 ---
 title: Giffleball
-description: "From tutorial: https://www.zachleat.com/web/eleventy-tutorial-level-1/"
+description: "From tutorial: https://www.zachleat.com/web/eleventy-tutorial-level-2/"
 images:
   - 1.jpg
   - 2.jpg
@@ -18,11 +18,13 @@ images:
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
     <ul>
-      {% for filename in images %}
+      {%- for filename in images %}
+        {%- capture path %}img/{{ filename }}{% endcapture %}
         <li>
           <a href="img/{{ filename | url_encode }}">{{ filename }}</a>
+          <span>{{ path | filesize }}</span>
         </li>
-      {% endfor %}
+      {%- endfor %}
     </ul>
   </body>
 
