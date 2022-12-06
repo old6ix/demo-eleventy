@@ -2,6 +2,8 @@
 
 A demo for [11ty](https://www.11ty.dev/).
 
+![Preview](https://user-images.githubusercontent.com/23132866/205854782-03516a3b-1f40-48fa-b9b0-fe9c72a60197.png)
+
 # Usage
 
 ## Install dependencies
@@ -10,16 +12,14 @@ A demo for [11ty](https://www.11ty.dev/).
 npm install
 ```
 
-## Generate and serve site
+## Generate site
 
 ```sh
-npx @11ty/eleventy
-npx @11ty/eleventy --serve
+npm run build
 ```
 
-## Visit
+## Serve site
 
-| Endpoints |
-| --------- |
-| /         |
-| /README/  |
+```sh
+npm run serve
+```

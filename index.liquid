@@ -1,0 +1,29 @@
+---
+title: Giffleball
+description: "From tutorial: https://www.zachleat.com/web/eleventy-tutorial-level-1/"
+images:
+  - 1.jpg
+  - 2.jpg
+  - parrot.gif
+---
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Giffleball</title>
+  </head>
+
+  <body>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <ul>
+      {% for filename in images %}
+        <li>
+          <a href="img/{{ filename | url_encode }}">{{ filename }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+
+</html>
